@@ -10,7 +10,7 @@ public class WeekEnumTest {
             System.out.println(value.toString());
         }
 
-        System.out.println("ordinal: "+WeekEnum.THU.ordinal());
+        System.out.println("ordinal: " + WeekEnum.THU.ordinal());
 
         WeekEnum thu = WeekEnum.THU;
         switch (thu) {
@@ -24,5 +24,24 @@ public class WeekEnumTest {
                 System.out.println(thu);
                 break;
         }
+    }
+
+    public static int eval(Operation op, int first, int second) {
+        int result = 0;
+        switch (op) {
+            case ADD:
+                result = first + second;
+                break;
+            case SUBTRACE:
+                result = first - second;
+                break;
+            case MULTIPLY:
+                result = first * second;
+                break;
+            case DIVIDE:
+                result = first / second;
+                break;
+        }
+        return result;
     }
 }
