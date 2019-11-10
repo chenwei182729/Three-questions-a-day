@@ -18,3 +18,9 @@
     Processes a method invocation on a proxy instance and returns the result.
 ```
 
+## Day02 序列化和反序列化
+
+### 实现 Serializable接口的类才能序列化和反序列化
+### 序列化对单例的破坏以及预防
+### 反射对单例的破坏以及预防
+
