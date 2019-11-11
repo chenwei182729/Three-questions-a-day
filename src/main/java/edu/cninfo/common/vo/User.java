@@ -1,4 +1,4 @@
-package edu.cninfo.basic.vo;
+package edu.cninfo.common.vo;
 
 import java.io.Serializable;
 

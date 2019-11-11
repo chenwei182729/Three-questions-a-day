@@ -1,6 +1,6 @@
 package edu.cninfo.basic.day02;
 
-import edu.cninfo.basic.vo.User;
+import edu.cninfo.common.vo.User;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
