@@ -71,7 +71,10 @@
 5. 构造函数： 类名相同的方法
 6. 方法： 普通方法
 
+## Day04 MyBatis源码阅读
 
+### 模拟mybatis3.5.3 LogFactory加载logger
+> 说明：Runnable接口的用法
 
 
 
