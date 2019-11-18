@@ -76,6 +76,11 @@
 ### 模拟mybatis3.5.3 LogFactory加载logger
 > 说明：Runnable接口的用法
 
+## Day05 注解
+
+Ehcache注解缓存了解到注解的组合用法
+
+
 
 
 
