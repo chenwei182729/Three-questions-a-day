@@ -56,4 +56,13 @@ public class User implements Serializable {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String string() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
