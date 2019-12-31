@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ArrayTest1",
+            "request": "launch",
+            "mainClass": "array.ArrayTest1",
+            "projectName": "javanotproject_5d17f521"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test1",
+            "request": "launch",
+            "mainClass": "Test1",
+            "projectName": "javanotproject_5d17f521"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EnumTest",
+            "request": "launch",
+            "mainClass": "EnumTest",
+            "projectName": "javanotproject_5d17f521"
+        }
+    ]
+}
