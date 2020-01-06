@@ -1,4 +1,4 @@
-package edu.cninfo.basic.day08;
+package edu.cninfo.concurrency.ch01;
 
 import java.sql.Time;
 import java.util.Calendar;

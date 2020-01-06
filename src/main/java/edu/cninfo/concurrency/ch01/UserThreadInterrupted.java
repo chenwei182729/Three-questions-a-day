@@ -1,4 +1,4 @@
-package edu.cninfo.basic.day08;
+package edu.cninfo.concurrency.ch01;
 
 
 import java.io.File;
@@ -15,7 +15,7 @@ public class UserThreadInterrupted {
         thread.start();
 
         try {
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(10);
         } catch (Exception e) {
             e.printStackTrace();
         }
