@@ -6,16 +6,16 @@ import java.util.concurrent.TimeUnit;
 
 public class WriterTask implements Runnable{
 
-    private final Deque<Event> deque;
+    private final Deque<Event2> deque;
 
-    public WriterTask(Deque<Event> deque) {
+    public WriterTask(Deque<Event2> deque) {
         this.deque = deque;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            Event event = new Event();
+            Event2 event = new Event2();
             event.setDate(Calendar.getInstance().getTime());
             event.setEvent(String.format("The thread %s has generated the event %d event",Thread.currentThread().getId(),i));
             deque.addFirst(event);
@@ -25,7 +25,6 @@ public class WriterTask implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
 }

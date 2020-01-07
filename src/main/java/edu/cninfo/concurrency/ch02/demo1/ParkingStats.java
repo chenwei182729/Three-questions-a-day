@@ -1,4 +1,4 @@
-package edu.cninfo.concurrency.ch02;
+package edu.cninfo.concurrency.ch02.demo1;
 
 public class ParkingStats {
     private long numberCars;

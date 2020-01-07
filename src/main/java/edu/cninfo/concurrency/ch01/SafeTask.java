@@ -5,12 +5,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class SafeTask implements Runnable {
-    private ThreadLocal<Date> startDate=new ThreadLocal<Date>(){
-        @Override
-        protected Date initialValue() {
-            return Calendar.getInstance().getTime();
-        }
-    };
+    private ThreadLocal<Date> startDate= ThreadLocal.withInitial(() -> Calendar.getInstance().getTime());
 
     @Override
     public void run() {

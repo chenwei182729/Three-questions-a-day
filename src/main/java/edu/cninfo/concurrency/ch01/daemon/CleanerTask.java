@@ -6,9 +6,9 @@ import java.util.Deque;
 
 public class CleanerTask extends Thread {
     private static final long DIFFERENCE_CONST = 10000;
-    private final Deque<Event> deque;
+    private final Deque<Event2> deque;
 
-    public CleanerTask(Deque<Event> deque) {
+    public CleanerTask(Deque<Event2> deque) {
         this.deque = deque;
         setDaemon(true);
     }
@@ -30,7 +30,7 @@ public class CleanerTask extends Thread {
         boolean delete = false;
 
         do {
-            Event event = deque.getLast();
+            Event2 event = deque.getLast();
             difference = date.getTime() - event.getDate().getTime();
             if (difference > DIFFERENCE_CONST) {
                 System.out.println("Cleaner : " + event.getEvent());

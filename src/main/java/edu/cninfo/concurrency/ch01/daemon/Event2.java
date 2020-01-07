@@ -3,7 +3,7 @@ package edu.cninfo.concurrency.ch01.daemon;
 
 import java.util.Date;
 
-public class Event {
+public class Event2 {
     private Date date;
     private String event;
 

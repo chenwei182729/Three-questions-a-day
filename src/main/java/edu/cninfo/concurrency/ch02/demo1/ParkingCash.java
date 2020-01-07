@@ -1,4 +1,4 @@
-package edu.cninfo.concurrency.ch02;
+package edu.cninfo.concurrency.ch02.demo1;
 
 public class ParkingCash {
     private static final long cost = 2;
