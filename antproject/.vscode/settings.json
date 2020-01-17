@@ -1,0 +1,6 @@
+{
+    "files.autoGuessEncoding": true,
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontWeightBold": "normal"
+}

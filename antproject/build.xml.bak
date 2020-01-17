@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="execute">
+    
+    <!--fileset可以设定一组文件集来进行操作，dir指明文件集要进行选择的路径，
+    通过id可以指定这个文件的名称，在使用的时候进行直接的引入
+    include和exclude可以设定包含返回和排除范围**/*.*所有目录中的所有文件
+    -->
+    <fileset id="src.path" dir="src">
+        <include name="**/*.*"/>
+        <!--<exclude name="**/*.java"/>-->
+    </fileset>
+    
+    <target name="init">
+        <delete dir="../build"></delete>
+        <mkdir dir="../build"/>
+        <mkdir dir="../build/src"/>
+        <mkdir dir="..//build/classes"/>
+        <mkdir dir="../build/dist"/>
+    </target>
+    
+    <target name="copySrc" depends="init">
+        <copy todir="build/src">
+            <fileset refid="src.path"></fileset>
+        </copy>
+    </target>
+    
+    <target name="compile" depends="init">
+        <javac destdir="build/classes" srcdir="src"></javac>
+    </target>
+    
+    <target name="jar" depends="compile">
+        <jar destfile="build/dist/hello.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="ant.zttc.edu.cn.HelloWorld"/>
+                <attribute name="Build-By" value="Konghao"/>
+            </manifest>
+        </jar>  
+    </target>
+    
+    <target name="execute" depends="jar,copySrc">
+        
+        <echo>基于类路径的classname来完成执行</echo>
+        <java classname="ant.zttc.edu.cn.HelloWorld" classpath="build/classes">
+            <arg value="张三"/>
+            <arg value="李四"/>
+            <arg value="王五"/>
+        </java>
+        
+        <echo>基于jar文件执行</echo>
+        <java jar="build/dist/hello.jar" fork="true">
+            <arg value="张三"/>
+            <arg value="李四"/>
+            <arg value="王五"/>
+        </java>
+    </target>
+</project>

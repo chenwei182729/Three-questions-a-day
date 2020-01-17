@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="execute">
+    <fileset id="src.path" dir=".">
+        <include name="*.java"/>
+    </fileset>
+    
+    <target name="init">
+        <delete dir="../build"></delete>
+        <mkdir dir="../build"/>
+        <mkdir dir="../build/src"/>
+        <mkdir dir="../build/classes"/>
+        <mkdir dir="../build/dist"/>
+    </target>
+    
+    <target name="copySrc" depends="init">
+        <copy todir="../build/src">
+            <fileset refid="src.path"></fileset>
+        </copy>
+    </target>
+    
+    <target name="compile" depends="init">
+        <javac destdir="../build/classes" srcdir="."></javac>
+    </target>
+    
+    <target name="jar" depends="compile">
+        <jar destfile="../build/dist/hello.jar" basedir="../build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="ArrayTest1"/>
+                <attribute name="Build-By" value="ChenXinwei"/>
+            </manifest>
+        </jar>  
+    </target>
+    <!-- <target name="execute" depends="jar,copySrc">
+        <echo>use classname </echo>
+        <java classname="ArrayTest1" classpath="../build/classes"/>
+    </target> -->
+    <!-- <target name="execute" depends="jar,copySrc">
+        <echo>use classname </echo>
+        <java classname="ArrayTest2" classpath="../build/classes"/>
+    </target> -->
+    <!-- <target name="execute" depends="jar,copySrc">
+        <echo>use classname </echo>
+        <java classname="ArrayTest3" classpath="../build/classes"/>
+    </target> -->
+    <target name="execute" depends="jar,copySrc">
+        <echo>use classname </echo>
+        <java classname="ReferenceArrayTest" classpath="../build/classes"/>
+    </target>
+</project>
