@@ -8,7 +8,7 @@
         <delete dir="../build"></delete>
         <mkdir dir="../build"/>
         <mkdir dir="../build/src"/>
-        <mkdir dir="..//build/classes"/>
+        <mkdir dir="../build/classes"/>
         <mkdir dir="../build/dist"/>
     </target>
     
