@@ -7,7 +7,6 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 10, time = 5, timeUnit = TimeUnit.SECONDS)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 /**
- * 比较 logger 插值与拼接字符串，的性能
+ * 比较 logger 插值与拼接字符串的性能
  * 参考: https://my.oschina.net/langxSpirit/blog/1799703
  */
 public class LogTest {
